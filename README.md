@@ -1,21 +1,15 @@
-# sound-calibration
+# Sound Sensor Calibration
 
+## Introduction 
+Create a program that can calibrate the sound sensor. ``||basic: Show||`` the ``||gatorMicrophone:sound||`` on the micro:bit. Hint: you can make the sensor more sensitive by changing the ``||gatorMicrophone: gain||``: the higher the gain the more sensitive the microphone is to changes in sound. The gain defaults to 2. After you think you've figured it out, ``|Download|`` the code and test it out. 
 
+```blocks
+input.onButtonPressed(Button.A, function () {
+    gatorMicrophone.setGain(GainOptions.Eight)
+    basic.showNumber(gatorMicrophone.getSoundIntensity())
+})
+```
 
-## TODO
-
-- [ ] Add a reference for your blocks here
-- [ ] Add "icon.png" image (300x200) in the root folder
-- [ ] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Turn on your automated build on https://travis-ci.org
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] On GitHub, create a new file named LICENSE. Select the MIT License template.
-- [ ] Get your package reviewed and approved https://makecode.microbit.org/extensions/approval
-
-Read more at https://makecode.microbit.org/extensions
-
-## Supported targets
-
-* for PXT/microbit
-(The metadata above is needed for package search.)
-
+```package
+gatorMicrophone=github:sparkfun/pxt-gator-microphone
+```
